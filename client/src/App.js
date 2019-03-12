@@ -39,7 +39,12 @@ class App extends Component {
     return (
       <div className="App">
         <h2>Score Board</h2>
-        <Dashboard />
+        <Dashboard
+          countStrike={this.countStrike}
+          countBall={this.countBall}
+          countFoul={this.countFoul}
+          countHit={this.countHit}
+        />
         <Display balls={this.state.balls} strikes={this.state.strikes} />
       </div>
     );
