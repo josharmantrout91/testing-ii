@@ -38,5 +38,10 @@ describe("<Display/>", () => {
 });
 
 describe("<Dashboard/>", () => {
-  it("should have buttons that render a fn when clicked", () => {});
+  it("should have buttons that render a fn when clicked", () => {
+    const dummyFunc = jest.fn();
+    const { getByTestId } = render(<Dashboard countStrike={dummyFunc} />);
+    const count = getByTestId("strike");
+    fireEvent.click(count);
+  });
 });
