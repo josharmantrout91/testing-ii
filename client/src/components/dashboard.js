@@ -1,12 +1,21 @@
 import React from "react";
 
 function Dashboard(props) {
+  let { countStrike, countBall, countFoul, countHit } = props;
   return (
     <div>
-      <button onClick={props.countStrike}>Strike</button>
-      <button onClick={props.countBall}>Ball</button>
-      <button onClick={props.countFoul}>Foul</button>
-      <button onClick={props.countHit}>Hit</button>
+      <button data-testid="strike" onClick={countStrike}>
+        Strike
+      </button>
+      <button data-testid="ball" onClick={countBall}>
+        Ball
+      </button>
+      <button data-testid="foul" onClick={countFoul}>
+        Foul
+      </button>
+      <button data-testid="hit" onClick={countHit}>
+        Hit
+      </button>
     </div>
   );
 }
